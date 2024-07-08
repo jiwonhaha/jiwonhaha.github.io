@@ -40,6 +40,30 @@ section#home {
     background-color: #f4f4f4;
 }
 
+.about-content {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.about-image {
+    margin-right: 2rem;
+}
+
+.about-image img {
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
 section#portfolio ul {
     list-style: none;
     padding: 0;
