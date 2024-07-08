@@ -116,6 +116,7 @@ section#contact {
     background-color: #c8e6c9; /* Light green background */
     padding: 2rem;
     border-radius: 8px;
+    margin-bottom: 5rem; /* Add space for the footer */
 }
 
 footer {
@@ -123,9 +124,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 footer p {
@@ -135,7 +133,7 @@ footer p {
 footer p a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 0.5rem;
 }
 
 footer p a i {
