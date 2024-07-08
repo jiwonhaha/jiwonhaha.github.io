@@ -119,8 +119,21 @@ section#key-modules {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
+.modules {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 2rem; /* Space between columns */
+}
+
+.module-group {
+    background-color: #ffffff; /* White background */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
 section#key-modules h3 {
-    margin-top: 1rem;
+    margin-top: 0;
     color: #1976D2; /* Dark blue text */
 }
 
