@@ -127,7 +127,7 @@ section#key-modules {
 
 .module-group {
     background-color: #ffffff; /* White background */
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
@@ -135,6 +135,8 @@ section#key-modules {
 section#key-modules h3 {
     margin-top: 0;
     color: #1976D2; /* Dark blue text */
+    border-bottom: 2px solid #1976D2; /* Underline */
+    padding-bottom: 0.5rem;
 }
 
 section#key-modules ul {
@@ -144,6 +146,15 @@ section#key-modules ul {
 
 section#key-modules ul li {
     margin: 0.5rem 0;
+    padding-left: 1rem; /* Indent text */
+    position: relative;
+}
+
+section#key-modules ul li::before {
+    content: "•"; /* Bullet point */
+    position: absolute;
+    left: 0;
+    color: #1976D2; /* Bullet color */
 }
 
 footer {
