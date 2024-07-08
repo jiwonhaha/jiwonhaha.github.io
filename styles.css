@@ -46,7 +46,7 @@ section {
 }
 
 section#home {
-    background-color: solid #90caf9; /* Blue border */
+    background-color: #90caf9; /* Blue background */
     text-align: center;
 }
 
