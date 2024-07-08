@@ -46,7 +46,7 @@ section {
 }
 
 section#home {
-    background-color: #3bf2ff; /* Yellow background */
+    background-color: #3bf2ff; /* Blue background */
     text-align: center;
 }
 
@@ -112,6 +112,31 @@ section#contact {
     background-color: #c8e6c9; /* Light green background */
     padding: 2rem;
     border-radius: 8px;
+}
+
+section#social {
+    background-color: #ffecb3; /* Light amber background */
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    text-align: center;
+}
+
+section#social ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#social ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+section#social ul li a {
+    color: #1976D2; /* Dark blue text */
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer {
