@@ -110,12 +110,6 @@ section#portfolio ul li a {
 
 section#portfolio ul li a i {
     margin-right: 0.5rem; /* Add some space between the icon and the text */
-}
-
-section#contact {
-    background-color: #c8e6c9; /* Light green background */
-    padding: 2rem;
-    border-radius: 8px;
     margin-bottom: 5rem; /* Add space for the footer */
 }
 
