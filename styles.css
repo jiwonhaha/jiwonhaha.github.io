@@ -121,7 +121,7 @@ section#key-modules {
 
 .modules {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 2rem; /* Space between columns */
 }
 
