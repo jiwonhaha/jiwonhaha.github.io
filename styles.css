@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
 }
 
 header {
@@ -57,11 +59,22 @@ section#home {
 
 .about-text {
     max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-text p {
     margin-bottom: 1rem;
-    line-height: 1.6;
+}
+
+.about-text strong {
+    font-size: 1.2em;
+}
+
+.about-text em {
+    color: #555;
 }
 
 section#portfolio ul {
