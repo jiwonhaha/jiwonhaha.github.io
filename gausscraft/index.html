@@ -10,8 +10,8 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            margin-left: 20%; /* Add a gap on the left side */
-            margin-right: 20%; /* Add a gap on the left side */
+            margin-left: 10%; /* Add a gap on the left side */
+            margin-right: 10%; /* Add a gap on the left side */
         }
         header {
             text-align: center;
@@ -65,12 +65,29 @@
             text-align: center;
             margin: 20px 0;
         }
+        /* Video Section Styles */
         .video-section {
             text-align: center;
             margin: 20px 20px;
         }
+
         .video-pair {
-            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .video-pair video {
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .video-pair {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -99,18 +116,19 @@
     <!-- Image Section: Insert model explanation image -->
     <div class="image-section">
         <h3>Method</h3>
-        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="600">
-        <p>Figure 1: A diagram explaining the model workflow</p>
+        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="1000">
+        <p>Figure 1: A wdiagram explaining the model workflo</p>
     </div>
 
+    <!-- Video Section: Add result videos with players -->
     <div class="video-section">
         <!-- First pair of videos -->
         <div class="video-pair">
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/lego.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/lego_deformed.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -118,33 +136,35 @@
 
         <!-- Second pair of videos -->
         <div class="video-pair">
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/nerf_chair.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/nerf_chair_deformed.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
 
+        <!-- Third pair of videos -->
         <div class="video-pair">
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/maximo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/maximo_deformed.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
 
+        <!-- Fourth pair of videos -->
         <div class="video-pair">
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/pony.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <video width="400" autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/pony_deformed.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
