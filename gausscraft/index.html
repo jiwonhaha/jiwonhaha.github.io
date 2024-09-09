@@ -79,14 +79,6 @@
         <h1>GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</h1>
     </header>
 
-
-    <!-- Image Section: Insert model explanation image -->
-    <div class="image-section">
-        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="600">
-        <p>Figure 1: A diagram explaining the model workflow</p>
-    </div>
-
-
     <div class="author-section">
         <p><a href="https://github.com/jiwonhaha">Jiwon Park</a><sup>1</sup>, <a href="https://scholar.google.com/citations?user=IRMX4-4AAAAJ&hl=en">Lourdes Agapito</a><sup>1</sup></p>
         <p><sup>1</sup>University College London</p>
@@ -101,6 +93,14 @@
     <div class="abstract-section">
         <h3>Abstract</h3>
         <p>2D Gaussian Splatting has recently provided a novel method for accurately reconstructing geometrically consistent radiance fields from multi-view images, improving surface representation and achieving high-quality, real-time rendering. However, existing 2D or 3D Gaussian splatting methods do not offer the capability for user-directed scene editing. While some 3D Gaussian-based methods exist for avatar-specific editing, they are limited to avatar applications and do not extend to general scenarios. Therefore, this paper introduces GaussCraft, an real-time scene editing framework that utilizes 2D Gaussian Splatting for high-quality mesh reconstruction. Unlike previous methods, GaussCraft only requires training once using the reconstructed mesh and does not need retraining for each edited scene. Specifically, GaussCraft reconstructs the mesh from multi-view images using 2D Gaussian Splatting, and then binds 2D Gaussians to each mesh face, allowing users to render scenes with user-edited, deformed meshes. This method has been tested on both synthetic and real-world captured data, showing significant potential for application across various fields.</p>
+    </div>
+
+
+    <!-- Image Section: Insert model explanation image -->
+    <div class="image-section">
+        <h3>Method</h3>
+        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="600">
+        <p>Figure 1: A diagram explaining the model workflow</p>
     </div>
 
     <div class="video-section">
