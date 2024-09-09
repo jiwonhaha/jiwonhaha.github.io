@@ -10,8 +10,8 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            margin-left: 10%; /* Add a gap on the left side */
-            margin-right: 10%; /* Add a gap on the left side */
+            margin-left: 15%; /* Add a gap on the left side */
+            margin-right: 15%; /* Add a gap on the left side */
         }
         header {
             text-align: center;
@@ -32,6 +32,7 @@
             margin: 20px 0;
         }
         .author-section p {
+            font-size: 20px;
             margin: 0;
         }
         .links-section {
@@ -64,6 +65,11 @@
         .image-section {
             text-align: center;
             margin: 20px 0;
+            
+        }
+        .image-section p {
+            text-align: left;
+            margin: 20px 0;
         }
         /* Video Section Styles */
         .video-section {
@@ -81,7 +87,7 @@
         .video-pair video {
             width: 100%;
             max-width: 400px;
-            border: 1px solid #ccc;
+            /* border: 1px solid #ccc; */
         }
 
         @media (max-width: 768px) {
@@ -116,8 +122,10 @@
     <!-- Image Section: Insert model explanation image -->
     <div class="image-section">
         <h3>Method</h3>
-        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="1000">
-        <p>Figure 1: A wdiagram explaining the model workflo</p>
+        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="900">
+        <p>GaussCraft employs cameras calibrated via Structure-from-Motion (SfM) and 2D Gaussian splatting for mesh reconstruction, allowing users to deform the mesh using the As-Rigid-As-Possible method or alternative techniques like skeleton or cage-based deformation.
+        <br>
+        Following deformation, the model adjusts each Gaussian’s scale, position, and rotation in both global and local spaces, treating each mesh face as a tangent plane for the bound 2D Gaussians. A loss function integrates RGB, Depth Distortion, and Normal Consistency losses to ensure Gaussians remain aligned with their corresponding mesh faces, incorporating adaptive density control. Once optimized with the reconstructed mesh, the model recalculates parameters with the deformed mesh to render user-edited scenes in real time.</p>
     </div>
 
     <!-- Video Section: Add result videos with players -->
