@@ -1,179 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            margin-left: 15%; /* Add a gap on the left side */
-            margin-right: 15%; /* Add a gap on the left side */
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        header h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        header h2 {
-            font-size: 18px;
-            font-weight: normal;
-            color: gray;
-        }
-        .author-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .author-section p {
-            font-size: 20px;
-            margin: 0;
-        }
-        .links-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .links-section a {
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #1e90ff;
-        }
-        .highlight {
-            text-align: center;
-            margin: 20px 0;
-            font-style: italic;
-            color: #c71585;
-            font-size: 14px;
-        }
-        .abstract-section {
-            padding: 20px;
-            background-color: #f1f1f1;
-        }
-        .abstract-section h3 {
-            text-align: center;
-        }
-        .abstract-section p {
-            text-align: justify;
-        }
-        .image-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .image-section p {
-            text-align: left;
-            margin: 20px 0;
-        }
-        /* Video Section Styles */
-        .video-section {
-            text-align: center;
-            margin: 20px 20px;
-        }
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</title>
 
-        .video-pair {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        .video-pair video {
-            width: 100%;
-            max-width: 400px;
-            /* border: 1px solid #ccc; */
-        }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-        @media (max-width: 768px) {
-            .video-pair {
-                flex-direction: column;
-            }
-        }
-    </style>
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
-    <header>
-        <h1>GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</h1>
-    </header>
 
-    <div class="author-section">
-        <p><a href="https://github.com/jiwonhaha">Jiwon Park</a><sup>1</sup>, <a href="https://scholar.google.com/citations?user=IRMX4-4AAAAJ&hl=en">Lourdes Agapito</a><sup>1</sup></p>
-        <p><sup>1</sup>University College London</p>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jiwonhaha.github.io">Jiwon Park</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=IRMX4-4AAAAJ&hl=en">Lourdes Agapito</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University College London</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="/Master_Thesis.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>              
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948/d/dsdad"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA//sadadsad"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/jiwonhaha/GaussCraft"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/sdafasf/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body videos-container">
+      <div class="video-wrapper">
+        <video id="teaser1" autoplay muted loop playsinline width="100%" height="auto">
+          <source src="./static/videos/maximo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="video-wrapper">
+        <video id="teaser2" autoplay muted loop playsinline width="100%" height="auto">
+          <source src="./static/videos/maximo_deformed.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            2D Gaussian Splatting has recently provided a novel method for accurately reconstructing 
+            geometrically consistent radiance fields from multi-view images, improving surface 
+            representation and achieving high-quality, real-time rendering. 
+            However, existing 2D or 3D Gaussian splatting methods do not offer the capability for 
+            user-directed scene editing. While some 3D Gaussian-based methods exist for avatar-specific 
+            editing, they are limited to avatar applications and do not extend to general scenarios. 
+            Therefore, this paper introduces GaussCraft, an real-time scene editing framework that 
+            utilizes 2D Gaussian Splatting for high-quality mesh reconstruction. Unlike previous methods, 
+            GaussCraft only requires training once using the reconstructed mesh and does not need 
+            retraining for each edited scene. Specifically, GaussCraft reconstructs the mesh from 
+            multi-view images using 2D Gaussian Splatting, and then binds 2D Gaussians to each mesh face, 
+            allowing users to render scenes with user-edited, deformed meshes. This method has been tested 
+            on both synthetic and real-world captured data, showing significant potential for application 
+            across various fields.
+          </p>
+          
+        </div>
+      </div>
     </div>
 
-    <div class="links-section">
-        <a href="link-to-paper">Paper</a>
-        <a href="https://github.com/jiwonhaha/GaussCraft">Code</a>
-        <a href="link-to-data">Data</a>
+    <!-- Paper image. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Methodology</h2>
+      <!-- <h2 class="title is-3">Overview of GaussCraft</h2> -->
+      <div class="publication-image">
+        <img src="./static/videos/2dgs_edit_main.png" alt="Image Description" style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            GaussCraft employs cameras calibrated via Structure-from-Motion (SfM) and 
+            2D Gaussian splatting for mesh reconstruction, allowing users to deform the mesh using 
+            the As-Rigid-As-Possible method or alternative techniques like skeleton or cage-based 
+            deformation.
+          </p>
+          <p>
+            Following deformation, the model adjusts each Gaussian’s scale, position, and rotation 
+            in both global and local spaces, treating each mesh face as a tangent plane for the bound 
+            2D Gaussians. A loss function integrates RGB, Depth Distortion, and Normal Consistency 
+            losses to ensure Gaussians remain aligned with their corresponding mesh faces, incorporating 
+            adaptive density control. Once optimized with the reconstructed mesh, the model recalculates 
+            parameters with the deformed mesh to render user-edited scenes in real time.</p>
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="abstract-section">
-        <h3>Abstract</h3>
-        <p>2D Gaussian Splatting has recently provided a novel method for accurately reconstructing geometrically consistent radiance fields from multi-view images, improving surface representation and achieving high-quality, real-time rendering. However, existing 2D or 3D Gaussian splatting methods do not offer the capability for user-directed scene editing. While some 3D Gaussian-based methods exist for avatar-specific editing, they are limited to avatar applications and do not extend to general scenarios. Therefore, this paper introduces GaussCraft, an real-time scene editing framework that utilizes 2D Gaussian Splatting for high-quality mesh reconstruction. Unlike previous methods, GaussCraft only requires training once using the reconstructed mesh and does not need retraining for each edited scene. Specifically, GaussCraft reconstructs the mesh from multi-view images using 2D Gaussian Splatting, and then binds 2D Gaussians to each mesh face, allowing users to render scenes with user-edited, deformed meshes. This method has been tested on both synthetic and real-world captured data, showing significant potential for application across various fields.</p>
+  
+<!--/ Paper image. -->
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Results</h2>
+      <div class="hero-body videos-container">
+        <div class="video-wrapper">
+          <video id="teaser1" autoplay muted loop playsinline width="100%" height="auto">
+            <source src="./static/videos/lego.mp4" type="video/mp4">
+          </video>
+        </div>
+  
+        <div class="video-wrapper">
+          <video id="teaser2" autoplay muted loop playsinline width="100%" height="auto">
+            <source src="./static/videos/lego_deformed.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
     </div>
 
-
-    <!-- Image Section: Insert model explanation image -->
-    <div class="image-section">
-        <h3>Method</h3>
-        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="900">
-        <p>GaussCraft employs cameras calibrated via Structure-from-Motion (SfM) and 2D Gaussian splatting for mesh reconstruction, allowing users to deform the mesh using the As-Rigid-As-Possible method or alternative techniques like skeleton or cage-based deformation.
-        <br>
-        Following deformation, the model adjusts each Gaussian’s scale, position, and rotation in both global and local spaces, treating each mesh face as a tangent plane for the bound 2D Gaussians. A loss function integrates RGB, Depth Distortion, and Normal Consistency losses to ensure Gaussians remain aligned with their corresponding mesh faces, incorporating adaptive density control. Once optimized with the reconstructed mesh, the model recalculates parameters with the deformed mesh to render user-edited scenes in real time.</p>
+    <div class="container is-max-desktop">
+      <div class="hero-body videos-container">
+        <div class="video-wrapper">
+          <video id="teaser1" autoplay muted loop playsinline width="100%" height="auto">
+            <source src="./static/videos/nerf_chair.mp4" type="video/mp4">
+          </video>
+        </div>
+  
+        <div class="video-wrapper">
+          <video id="teaser2" autoplay muted loop playsinline width="100%" height="auto">
+            <source src="./static/videos/nerf_chair_deformed.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- First pair of videos -->
-    <div class="video-pair">
-        <video controls loop preload="auto">
-            <source src="img/lego.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+  <div class="container is-max-desktop">
+    <div class="hero-body videos-container">
+      <div class="video-wrapper">
+        <video id="teaser1" autoplay muted loop playsinline width="100%" height="auto">
+          <source src="./static/videos/pony.mp4" type="video/mp4">
         </video>
-        <video controls loop preload="auto">
-            <source src="img/lego_deformed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+      </div>
 
-    <!-- Second pair of videos -->
-    <div class="video-pair">
-        <video controls loop preload="auto">
-            <source src="img/nerf_chair.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+      <div class="video-wrapper">
+        <video id="teaser2" autoplay muted loop playsinline width="100%" height="auto">
+          <source src="./static/videos/pony_deformed.mp4" type="video/mp4">
         </video>
-        <video controls loop preload="auto">
-            <source src="img/nerf_chair_deformed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+      </div>
     </div>
+  </div>
 
-    <!-- Third pair of videos -->
-    <div class="video-pair">
-        <video controls loop preload="auto">
-            <source src="img/maximo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <video controls loop preload="auto">
-            <source src="img/maximo_deformed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+</section>
 
-    <!-- Fourth pair of videos -->
-    <div class="video-pair">
-        <video controls loop preload="auto">
-            <source src="img/pony.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <video controls loop preload="auto">
-            <source src="img/pony_deformed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+
+
+
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
     </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website is created by borrowing source code from  <a rel="license"
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
