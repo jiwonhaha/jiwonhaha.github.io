@@ -3,28 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Paper Project</title>
+    <title>GaussCraft: Precision Editing and Reconstruction \\with 2D Gaussian Splatting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header h2 {
+            font-size: 18px;
+            font-weight: normal;
+            color: gray;
+        }
+        .author-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .author-section p {
+            margin: 0;
+        }
+        .links-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .links-section a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #1e90ff;
+        }
+        .highlight {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #c71585;
+            font-size: 14px;
+        }
+        .abstract-section {
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+        .abstract-section h3 {
+            text-align: center;
+        }
+        .abstract-section p {
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Research Paper</h1>
-    <p><strong>Title:</strong> GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</p>
-    <p><strong>Author:</strong> Jiwon Park</p>
+    <header>
+        <h1>GaussCraft: Precision Editing and Reconstruction \\with 2D Gaussian Splatting</h1>
+        <!-- <h2>SIGGRAPH 2024</h2> -->
+    </header>
 
-    <h2>Abstract</h2>
-    <p>2D Gaussian Splatting has recently provided a novel method for accurately recon- structing geometrically consistent radiance fields from multi-view images, improv- ing surface representation and achieving high-quality, real-time rendering. However, existing 2D or 3D Gaussian splatting methods do not offer the capability for user- directed scene editing. While some 3D Gaussian-based methods exist for avatar- specific editing, they are limited to avatar applications and do not extend to general scenarios. Therefore, this paper introduces GaussCraft, an real-time scene editing framework that utilizes 2D Gaussian Splatting for high-quality mesh reconstruction. Unlike previous methods, GaussCraft does not require retraining the model for each edited scene; it is trained once using the reconstructed mesh. Specifically, Gauss- Craft reconstructs the mesh from multi-view images using 2D Gaussian Splatting, and then binds 2D Gaussians to each mesh face, allowing users to render scenes with user-edited, deformed meshes. This method has been tested on both synthetic and real-world captured data, showing significant potential for application across various fields.</p>
+    <div class="author-section">
+        <p>Jiwon Park<sup>1</sup>, Lourdes Agapito<sup>1</sup></p>
+        <p><sup>1</sup>University College London</p>
+    </div>
 
-    <h2>Introduction</h2>
-    <p>The motivation behind this research is...</p>
+    <div class="links-section">
+        <a href="link-to-paper">Paper</a>
+        <!-- <a href="link-to-video">Video</a> -->
+        <a href="https://github.com/jiwonhaha/GaussCraft">Code</a>
+        <!-- <a href="link-to-demo">Demo</a> -->
+        <a href="link-to-data">Data</a>
+    </div>
 
-    <h2>Methodology</h2>
-    <p>We used the following methods to conduct our research...</p>
+    <!-- <div class="highlight">
+        <p>2DGS adopts (a) 2D oriented disks as surface elements and allows (b) high-quality rendering with gaussian splatting.</p>
+        <p>Use the slider as the "splatter"</p>
+    </div> -->
 
-    <h2>Results</h2>
-    <img src="path-to-image" alt="Results Graph">
-
-    <h2>Conclusion</h2>
-    <p>In conclusion, our research highlights...</p>
-
-    <a href="link-to-your-paper.pdf">Download the full paper</a>
+    <div class="abstract-section">
+        <h3>Abstract</h3>
+        <p>2D Gaussian Splatting has recently provided a novel method for accurately reconstructing geometrically consistent radiance fields from multi-view images, improving surface representation and achieving high-quality, real-time rendering. However, existing 2D or 3D Gaussian splatting methods do not offer the capability for user-directed scene editing. While some 3D Gaussian-based methods exist for avatar-specific editing, they are limited to avatar applications and do not extend to general scenarios. Therefore, this paper introduces GaussCraft, an real-time scene editing framework that utilizes 2D Gaussian Splatting for high-quality mesh reconstruction. Unlike previous methods, GaussCraft only requires training once using the reconstructed mesh and does not need retraining for each edited scene. Specifically, GaussCraft reconstructs the mesh from multi-view images using 2D Gaussian Splatting, and then binds 2D Gaussians to each mesh face, allowing users to render scenes with user-edited, deformed meshes. This method has been tested on both synthetic and real-world captured data, showing significant potential for application across various fields.</p>
+    </div>
 </body>
 </html>
