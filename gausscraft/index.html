@@ -61,6 +61,17 @@
         .abstract-section p {
             text-align: justify;
         }
+        .image-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .video-section {
+            text-align: center;
+            margin: 20px 20px;
+        }
+        .video-pair {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -79,9 +90,44 @@
         <a href="link-to-data">Data</a>
     </div>
 
+    <!-- Image Section: Insert model explanation image -->
+    <div class="image-section">
+        <img src="img/2dgs_edit_main.png" alt="Model explanation diagram" width="600">
+        <p>Figure 1: A diagram explaining the model workflow</p>
+    </div>
+
     <div class="abstract-section">
         <h3>Abstract</h3>
         <p>2D Gaussian Splatting has recently provided a novel method for accurately reconstructing geometrically consistent radiance fields from multi-view images, improving surface representation and achieving high-quality, real-time rendering. However, existing 2D or 3D Gaussian splatting methods do not offer the capability for user-directed scene editing. While some 3D Gaussian-based methods exist for avatar-specific editing, they are limited to avatar applications and do not extend to general scenarios. Therefore, this paper introduces GaussCraft, an real-time scene editing framework that utilizes 2D Gaussian Splatting for high-quality mesh reconstruction. Unlike previous methods, GaussCraft only requires training once using the reconstructed mesh and does not need retraining for each edited scene. Specifically, GaussCraft reconstructs the mesh from multi-view images using 2D Gaussian Splatting, and then binds 2D Gaussians to each mesh face, allowing users to render scenes with user-edited, deformed meshes. This method has been tested on both synthetic and real-world captured data, showing significant potential for application across various fields.</p>
+    </div>
+
+    <!-- Video Section: Add result videos with players -->
+    <div class="video-section">
+        <!-- First pair of videos -->
+        <div class="video-pair">
+            <video width="300" controls loop>
+                <source src="img/lego.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="300" controls loop>
+                <source src="img/lego_deformed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Second pair of videos -->
+        <div class="video-pair">
+            <video width="300" controls loop>
+                <source src="img/nerf_chair.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="300" controls loop>
+                <source src="img/nerf_chair_deformed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Add more pairs of videos as needed -->
     </div>
 </body>
 </html>
