@@ -18,7 +18,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #4CAF50; /* Green background */
+    background-color: #bce6be; /* Green background */
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -139,7 +139,7 @@ section#portfolio ul li {
 }
 
 section#portfolio ul li a {
-    color: #bae9bc; /* Green text */
+    color: #4CAF50; /* Green text */
     text-decoration: none;
     font-weight: bold;
 }
@@ -150,7 +150,7 @@ section#portfolio ul li a i {
 
 /* Footer styling */
 footer {
-    background-color: #4CAF50; /* Green background */
+    background-color: #bce6be; /* Green background */
     color: white;
     text-align: center;
     padding: 1rem 0;
