@@ -1,8 +1,8 @@
 /* Wrapper container */
 .container {
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1000px; /* Adjust as needed */
     margin: 0 auto; /* Center the container */
-    padding: 0 4rem; /* Add some horizontal padding for smaller screens */
+    padding: 0 2rem; /* Add some horizontal padding for smaller screens */
 }
 
 /* General body styling */
