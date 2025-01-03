@@ -8,6 +8,14 @@ body {
     background-color: #f0f8ff; /* Light background color */
 }
 
+.container {
+    margin: 0 auto; /* Centers the content horizontally */
+    width: 90%; /* Adjustable percentage width */
+    max-width: 1200px; /* Prevents the container from being too wide */
+    padding: 0 20px; /* Optional: Adds internal padding */
+}
+
+
 header {
     background-color: #4CAF50; /* Green background */
     color: white;
