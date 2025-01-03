@@ -10,7 +10,7 @@ body {
 
 .container {
     margin: 0 auto; /* Centers the content horizontally */
-    width: 90%; /* Adjustable percentage width */
+    width: 70%; /* Adjustable percentage width */
     max-width: 1200px; /* Prevents the container from being too wide */
     padding: 0 20px; /* Optional: Adds internal padding */
 }
