@@ -176,3 +176,12 @@ body {
 .subtitle {
   margin-bottom: 20px; /* Adds spacing between the videos and the caption */
 }
+
+.thanks-influencers img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures the image is fully visible without cropping */
+  border-radius: 8px; /* Optional: Rounds the corners of the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
