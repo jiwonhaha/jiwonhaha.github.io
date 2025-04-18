@@ -183,7 +183,7 @@ body {
       .about-text {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem; /* adds vertical spacing between schools */
+        gap: 3rem; /* adds vertical spacing between schools */
         max-width: 700px;
       }
       
