@@ -88,10 +88,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-
-  .education {
-    margin-bottom: 1.5rem;
-  }
   
   .project-img {
     display: block;
@@ -167,14 +163,33 @@ body {
     }
   
     .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-image {
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
+        display: flex;
+        align-items: flex-start;
+        background-color: #e3f2fd;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+      
+      .about-image {
+        margin-right: 2rem;
+      }
+      
+      .about-image img {
+        border-radius: 50%;
+        border: 4px solid #90caf9;
+      }
+      
+      .about-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; 
+      }
+      
+      .education p {
+        margin: 0.25rem 0;
+      }
+      
   }
 
   
