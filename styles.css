@@ -56,7 +56,7 @@ section {
 }
 
 section#home {
-    background-color: #90caf9; /* Blue background */
+    background-color: #e3f2fd; /* Blue background */
     text-align: center;
 }
 
@@ -170,12 +170,5 @@ footer p a {
 }
 
 footer p a i {
-    margin-right: 0.5rem; 
+    margin-right: 0.5rem; /* Add some space between the icon and the text */
 }
-.education-entry {
-    margin-bottom: 1.5em;
-  }
-  .education-entry h3 {
-    margin-bottom: 0.3em;
-  }
-  
