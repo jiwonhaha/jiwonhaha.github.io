@@ -1,130 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiwon Park - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiwon Park - Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <!-- <li><a href="#key-modules">Key Modules</a></li> -->
-                <li><a href="resources/cv.pdf" target="_blank">CV</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home">
-        <h2>Hello, I'm Jiwon Park</h2>
-        <p>Welcome to my personal website! I'm currently serving in the military in South Korea.</p>
-    </section>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="resources/cv.pdf" target="_blank">CV</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <img src="resources/photo.jpg" alt="Jiwon Park" width="150">
-            </div>
-            <div>
-                <p><strong>University College London (UCL)</strong></p>
-                <p><em>MSc in Computer Graphics, Vision, and Imaging</em></p>
-                <p>Graduated with Distinction. Conducted research on Gaussian Splatting editing with mesh deformation, supervised by Professor Lourdes Agapito.</p>
-                <p><strong>University of Birmingham</strong></p>
-                <p><em>BSc in Computer Science</em></p>
-                <p>Graduated with First Class Honors. Researched Non-human Primates Pose Estimation using transformers under the supervision of Dr. HyungJin Chang.</p>
-            </div>
+  <section id="home">
+    <h2>Hello, I'm Jiwon Park</h2>
+    <p>Welcome to my personal website! I'm currently serving in the military in South Korea.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="resources/photo.jpg" alt="Jiwon Park" width="150" />
+      </div>
+      <div>
+        <p><strong>University College London (UCL)</strong></p>
+        <p><em>MSc in Computer Graphics, Vision, and Imaging</em></p>
+        <p>Graduated with Distinction. Conducted research on Gaussian Splatting editing with mesh deformation, supervised by Professor Lourdes Agapito.</p>
+
+        <p><strong>University of Birmingham</strong></p>
+        <p><em>BSc in Computer Science</em></p>
+        <p>Graduated with First Class Honors. Researched Non-human Primates Pose Estimation using transformers under the supervision of Dr. HyungJin Chang.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Projects</h2>
+    <ul class="project-list">
+      <li>
+        <strong>GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</strong>
+        <img src="gausscraft/static/videos/2dgs_intro.png" alt="Gaussian Splatting Editing" class="project-img" />
+        <div class="project-links">
+          <a href="https://jiwonhaha.github.io/gausscraft/" target="_blank"><i class="fas fa-link"></i> Project Page</a>
+          <a href="https://github.com/jiwonhaha/GaussCraft" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="resources/Master_Thesis.pdf" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
         </div>
-    </section>
-    <section id="portfolio">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>GaussCraft: Precision Editing and Reconstruction with 2D Gaussian Splatting</strong>
-                <div>
-                    <img src="gausscraft/static/videos/2dgs_intro.png" alt="Gaussian Splatting Editing" width="500" style="margin-top: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </div>
-                <div style="margin-top: 0.5rem;">
-                    <a href="https://jiwonhaha.github.io/gausscraft/" target="_blank" style="margin-right: 1rem; color: #1976D2; text-decoration: none; font-weight: bold;"><i class="fas fa-link"></i> Project Page</a>
-                    <a href="https://github.com/jiwonhaha/GaussCraft" target="_blank" style="margin-right: 1rem; color: #388E3C; text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> GitHub Repository</a>
-                    <a href="resources/Master_Thesis.pdf" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;"><i class="fas fa-file-alt"></i> Paper</a>
-                </div>
-            </li>
-            <li><strong>Non-human Primates Pose Estimation using Transformers</strong>
-                <div>
-                    <img src="resources/METR.jpg" alt="Gaussian Splatting Editing" width="400" style="margin-top: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </div>
-                <div>
-                    <a href="https://github.com/jiwonhaha/METR" target="_blank" style="margin-right: 1rem; color: #388E3C; text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> GitHub Repository</a>
-                    <a href="resources/thesis.pdf" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;"><i class="fas fa-file-alt"></i> Paper</a>
-                </div>
-            <li><strong>Heat Kernel Signiture for Mesh classification</strong>
-                <div>
-                    <img src="resources/hks.png" alt="Gaussian Splatting Editing" width="250" style="margin-top: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </div>
-                <div>
-                    <a href="resources/hks.pdf"><i class="fas fa-file-alt"></i> Report</a></li>
-                </div>
-            <li><strong>Passport Control Simulator</strong> 
-                <div>
-                    <img src="resources/passport_c.png" alt="Gaussian Splatting Editing" width="400" style="margin-top: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </div>
-                <div>
-                    <a href="https://github.com/jiwonhaha/Passport-control-simulator" target="_blank" style="margin-right: 1rem; color: #388E3C; text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> GitHub Repository</a>
-                    <a href="resources/passport.pdf" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;"><i class="fas fa-file-alt"></i> Paper</a>
-                </div>
-            <li><strong>Swaperty</strong> (Website)
-                <div>
-                    <a href="https://github.com/jiwonhaha/Swaperty"><i class="fab fa-github"></i> GitHub Repository</a></li>
-                </div>
-        </ul>
-        
-    </section>
-    <!-- <section id="key-modules">
-        <h2>Key Modules</h2>
-        <div class="modules">
-            <div class="module-group">
-                <h3>University College London (UCL)</h3>
-                <ul>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/image-processing-COMP0026">Image Processing</a></li>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/computer-graphics-COMP0027">Computer Graphics</a></li>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/virtual-environments-COMP0113">Virtual Environments</a></li>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/inverse-problems-in-imaging-COMP0114">Inverse Problems in Imaging</a></li>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/machine-learning-for-visual-computing-COMP0169">Machine Learning for Visual Computing</a></li>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/acquisition-and-processing-of-3d-geometry-COMP0119">Acquisition and Processing of 3D Geometry</a></li>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/robot-vision-and-navigation-COMP0249">Robot Vision and Navigation</a></li>
-                    <li><a href="https://www.ucl.ac.uk/module-catalogue/modules/machine-vision-COMP0137">Machine Vision</a></li>
-                </ul>
-            </div>
-            <div class="module-group">
-                <h3>University of Birmingham</h3>
-                <ul>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=32578&searchTerm=002026">Computer Vision and Imaging</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=30437&searchTerm=002025">Machine Learning and Intelligent Data Analysis</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=32167&searchTerm=002026">Neural Computation</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=37810&searchTerm=002026">Natural Language Processing</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=30203&searchTerm=002023">Systems Programming in C/C++</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=34254&searchTerm=002024">Functional Programming</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=26263&searchTerm=002022">Team Project (Webpage)</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=30432&searchTerm=002024">Security and Networks</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=34232&searchTerm=002024">Object Oriented Programming</a></li>
-                    <li><a href="https://www.cs.bham.ac.uk/~jxb/dsa.html">Data Structure and Algorithms</a></li>
-                    <li><a href="https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=35324&searchTerm=002022">Mathematical and Logical Foundations of Computer Science</a></li>
-                </ul>
-            </div>
+      </li>
+
+      <li>
+        <strong>Non-human Primates Pose Estimation using Transformers</strong>
+        <img src="resources/METR.jpg" alt="Pose Estimation" class="project-img" />
+        <div class="project-links">
+          <a href="https://github.com/jiwonhaha/METR" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="resources/thesis.pdf" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
         </div>
-    </section> -->
-    <footer>
-        <p>&copy; 2024 Jiwon Park. All rights reserved.</p>
-        <p>
-            <a href="mailto:jiwonpark0514@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/jiwonhaha" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://github.com/jiwonhaha" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-        </p>
-    </footer>
+      </li>
+
+      <li>
+        <strong>Heat Kernel Signature for Mesh Classification</strong>
+        <img src="resources/hks.png" alt="HKS" class="project-img small" />
+        <div class="project-links">
+          <a href="resources/hks.pdf" target="_blank"><i class="fas fa-file-alt"></i> Report</a>
+        </div>
+      </li>
+
+      <li>
+        <strong>Passport Control Simulator</strong>
+        <img src="resources/passport_c.png" alt="Passport Control" class="project-img" />
+        <div class="project-links">
+          <a href="https://github.com/jiwonhaha/Passport-control-simulator" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="resources/passport.pdf" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
+        </div>
+      </li>
+
+      <li>
+        <strong>Swaperty (Website)</strong>
+        <div class="project-links">
+          <a href="https://github.com/jiwonhaha/Swaperty" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Jiwon Park. All rights reserved.</p>
+    <p>
+      <a href="mailto:jiwonpark0514@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+      <a href="https://www.linkedin.com/in/jiwonhaha" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="https://github.com/jiwonhaha" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+    </p>
+  </footer>
 </body>
 </html>
